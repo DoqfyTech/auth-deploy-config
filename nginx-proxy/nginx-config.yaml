@@ -26,7 +26,7 @@ data:
 
             # Frontend (Root path)
             location / {
-                proxy_pass http://auth-portal:80;
+                proxy_pass http://auth-portal-service:80;
                 proxy_set_header Host $host;
                 proxy_set_header X-Real-IP $remote_addr;
                 proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -36,7 +36,7 @@ data:
 
             # Backend API (API path)
             location /api/ {
-                proxy_pass http://auth-service:80;
+                proxy_pass http://auth-service-service:80;
                 proxy_set_header Host $host;
                 proxy_set_header X-Real-IP $remote_addr;
                 proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
