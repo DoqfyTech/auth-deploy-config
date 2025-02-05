@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: auth_portal
+  name: auth-portal
   namespace: my-app
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: auth_portal
+      app: auth-portal
   template:
     metadata:
       labels:
-        app: auth_portal
+        app: auth-portal
     spec:
       containers:
-        - name: auth_portal
+        - name: auth-portal
           image: rahulpatil1992/auth_portal:latest
           ports:
             - containerPort: 8002

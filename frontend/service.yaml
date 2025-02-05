@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: auth_portal-service
+  name: auth-portal-service
   namespace: my-app
 spec:
   selector:
-    app: auth_portal
+    app: auth-portal
   ports:
     - protocol: TCP
       port: 80
