@@ -40,7 +40,7 @@ spec:
                 configMapKeyRef:
                   key: ENV
                   name: env
-          image: auth-service
+          image: rahulpatil1992/auth_service:latest
           name: auth-service
           volumeMounts:
             - mountPath: /deploy_commands.sh

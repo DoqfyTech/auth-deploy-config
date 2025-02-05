@@ -25,7 +25,7 @@ spec:
       containers:
         - env:
             - name: API_URL
-          image: nginx:1.13-alpine
+          image: rahulpatil1992/auth_portal:latest
           name: auth-portal
           ports:
             - containerPort: 8002
