@@ -1,0 +1,29 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: my-app-ingress
+  namespace: my-app
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+    - host: myapp.local
+      http:
+        paths:
+          # Frontend Path
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: auth-portal
+                port:
+                  number: 80
+
+          # Backend Path
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: auth-service
+                port:
+                  number: 80

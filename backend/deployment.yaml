@@ -17,4 +17,4 @@ spec:
         - name: auth-service
           image: rahulpatil1992/auth_service:latest
           ports:
-            - containerPort: 5000
+            - containerPort: 8001
