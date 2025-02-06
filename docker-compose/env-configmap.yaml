@@ -1,9 +1,0 @@
-apiVersion: v1
-data:
-  API_URL: https://beta2-auth-gateway-api.doqfy.in
-  ENV: uat
-kind: ConfigMap
-metadata:
-  labels:
-    io.kompose.service: auth-service-env
-  name: env
